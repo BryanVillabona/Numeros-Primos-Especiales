@@ -1,4 +1,5 @@
 from menu import mostrar_menu, pedir_opcion
+from numeros import *
 
 
 while True:
@@ -6,12 +7,13 @@ while True:
     opc = pedir_opcion()
     match opc:
         case 1:
-            num = int(input("Digite el limite superior: "))
-            
+            limite = int(input("Digite un rango a calcular: "))
+            encontrar_primos_gemelos(limite)
         case 2:
-            print("opcion2")
+            limite = int(input("Digite un rango a calcular: "))
+            encontrar_primos_palindromicos(limite)
         case 3:
             print("Saliendo...")
             break
         case _:
-            print("Error. Elija una opción válida")    
+            print("Error. Elija una opción válida")  
